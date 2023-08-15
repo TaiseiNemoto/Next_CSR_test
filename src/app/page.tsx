@@ -5,6 +5,10 @@ export default function Home() {
     <main>
       <h1>Home</h1>
       <Link href="/about">To About</Link>
+      <br />
+      <a href="/about">To About by a tag</a>
+      <br />
+      <p>Home Page</p>
     </main>
   )
 }
