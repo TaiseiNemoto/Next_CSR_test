@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import CountUp from './_component/CountUp'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <a href="/about">To About by a tag</a>
       <br />
       <p>Home Page</p>
+      <CountUp />
     </main>
   )
 }
