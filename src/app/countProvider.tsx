@@ -1,10 +1,10 @@
 'use client'
 
-import { createContext, useState } from "react"
+import { createContext, useState, Dispatch, SetStateAction } from "react"
 
 type CountType = {
   count: number,
-  setCount: React.Dispatch<React.SetStateAction<number>>
+  setCount: Dispatch<SetStateAction<number>>
 }
 
 export const CountContext = createContext<CountType>({

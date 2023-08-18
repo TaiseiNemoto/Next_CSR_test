@@ -1,10 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+
+import { inter, zen_kaku_gothic_new } from './font'
+
 
 import CountProvider from './countProvider'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-    <body className={inter.className}><CountProvider>{children}</CountProvider></body>
+    <body className={zen_kaku_gothic_new.className}><CountProvider>{children}</CountProvider></body>
     </html>
   )
 }
