@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-    <body className={zen_kaku_gothic_new.className}><CountProvider>{children}</CountProvider></body>
+    <body className={`${inter.variable} ${zen_kaku_gothic_new.variable}`}><CountProvider>{children}</CountProvider></body>
     </html>
   )
 }

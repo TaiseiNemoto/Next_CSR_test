@@ -10,7 +10,7 @@ const CountUp = () => {
     <>
       <div>
         <p>Count: {count}</p>
-        <button onClick={() => setCount(num => num + 1)}>カウントアップ</button>
+        <button className="font-zenkaku" onClick={() => setCount(num => num + 1)}>カウントアップ</button>
       </div>
     </>
   )
