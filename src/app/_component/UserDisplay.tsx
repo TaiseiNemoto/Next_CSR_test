@@ -2,10 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-
-
-interface Usertype {
-  id: number,
+type Usertype = {
+  id: number | null,
   name: string,
   username: string,
   email: string,
@@ -28,8 +26,32 @@ interface Usertype {
   }
 }
 
+const initialUserData = {
+  id: null,
+  name: '',
+  username: '',
+  email: '',
+  address: {
+    street: '',
+    suite: '',
+    city: '',
+    zipcode: '',
+    geo: {
+      lat: '',
+      lng: ''
+    },
+    phone: '',
+    website: '',
+    company: {
+      name: '',
+      catchPhrase: '',
+      bs: ''
+    }
+  }
+}
+
 const UserDisplay = () => {
-  const [userData, setUserData] = useState<Usertype | {}>({})
+  const [userData, setUserData] = useState<Usertype>(initialUserData)
 
   useEffect(() => {
     async function getData() {
@@ -39,9 +61,9 @@ const UserDisplay = () => {
       }
       return res.json()
     }
-    const res = getData()
-    console.log(res);
-    setUserData(res);
+    getData().then((data) => {
+      setUserData(data)
+    })
   }, [])
   
   return (
