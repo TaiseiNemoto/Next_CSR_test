@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import CountUp from '../_component/CountUp'
+import CountDisplay from '../_component/CountDisplay'
 
 export default function About() {
   return (
@@ -16,7 +16,7 @@ export default function About() {
       <a href="/about/about_child/">To About Child by a tag</a>
       <br />
       <br />
-      <CountUp />
+      <CountDisplay />
     </main>
   )
 }

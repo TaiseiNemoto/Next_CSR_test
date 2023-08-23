@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import CountUp from './_component/CountUp'
 import UserDisplay from './_component/UserDisplay'
+import CountDisplay from './_component/CountDisplay'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <p>Home Page<span className='font-zenkaku'>：ホームページ</span>
       </p>
       <CountUp />
+      <CountDisplay />
       <UserDisplay />
     </main>
   )
